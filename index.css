@@ -1,0 +1,381 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  -ms-interpolation-mode: bicubic;
+  overflow-x: hidden;
+}
+
+/* Responsive image base styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Container Layout */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 2rem);
+}
+
+/* Logo Styles */
+.csi-logo,
+.gst-logo {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(120px, 20vw, 200px);
+  height: clamp(50px, 10vw, 80px);
+}
+
+.csi-logo {
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  background-image: url("csilogo.png");
+}
+
+.gst-logo {
+  top: clamp(10px, 2vw, 25px);
+  right: clamp(10px, 2vw, 20px);
+  background-image: url("siesWlogo.png");
+  height: clamp(60px, 12vw, 100px);
+  width: clamp(140px, 22vw, 230px);
+}
+
+/* Main Text Styles */
+.main-text {
+  text-align: center;
+  color: white;
+  font-family: "Bangers", sans-serif;
+  width: 100%;
+}
+
+.title div {
+  margin: clamp(3px, 1vw, 5px) 0;
+}
+
+.presents {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  letter-spacing: 0.2rem;
+}
+
+.csi {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 0.2rem;
+}
+
+.event-title {
+  font-size: clamp(3rem, 10vw, 9rem);
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  line-height: 1.1;
+  margin: clamp(0.5rem, 2vw, 1rem) 0;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  margin-top: clamp(5px, 2vw, 10px);
+  letter-spacing: 0.23rem;
+}
+
+.theme {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-top: clamp(5px, 2vw, 10px);
+  text-shadow: 1px 1px 3px black;
+  letter-spacing: 0.15rem;
+}
+
+.event-details {
+  margin-top: clamp(10px, 3vw, 20px);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  letter-spacing: 0.3rem;
+}
+
+/* Button Styles */
+.button-container {
+  margin-top: clamp(10px, 3vw, 20px);
+}
+
+.unstop-button {
+  background-color: #ff4d4d;
+  color: white;
+  font-family: "Bangers", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 3vw, 20px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.unstop-button:hover {
+  background-color: #e63939;
+  transform: scale(1.1);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.unstop-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.5);
+}
+
+/* Countdown Styles */
+.countdown-container {
+  margin-top: clamp(10px, 3vw, 20px);
+  text-align: center;
+  font-family: "Bangers", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+#countdown {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 3vw, 20px);
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.2rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background-color: transparent;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.welcome-section h1 {
+  font-size: clamp(2.5em, 8vw, 6em);
+  color: white;
+  font-family: "bangers";
+  text-shadow: 2px 2px 4px black;
+  font-weight: bolder;
+}
+
+.welcome-section h2 {
+  font-size: clamp(1.8em, 5vw, 3em);
+  margin: clamp(0.3em, 2vw, 0.6em) 0;
+  color: white;
+  font-family: "bangers";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-section ul {
+  text-align: left;
+  max-width: min(90%, 600px);
+  margin: 0 auto;
+  line-height: 1.6em;
+}
+
+.welcome-section ul li {
+  list-style-type: disc;
+  margin-bottom: clamp(5px, 2vw, 10px);
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.5px black;
+  font-size: clamp(16px, 3vw, 25px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* About Section */
+.about-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  background-color: transparent;
+  letter-spacing: 0.1rem;
+}
+
+.about-csi,
+.our-audience {
+  width: 100%;
+}
+
+.about-csi h2,
+.our-audience h2 {
+  text-align: center;
+  font-size: clamp(1.8em, 5vw, 3em);
+  margin-bottom: clamp(0.3em, 2vw, 0.6em);
+  color: white;
+  font-family: "bangers";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.about-csi ul {
+  list-style-type: disc;
+  padding-left: clamp(20px, 4vw, 80px);
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.5px black;
+  font-size: clamp(16px, 3vw, 25px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.our-audience ul {
+  list-style-type: disc;
+  padding-left: clamp(20px, 4vw, 120px);
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.5px black;
+  font-size: clamp(16px, 3vw, 25px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Contact Details */
+.contact-details {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  background-color: transparent;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.contact-details h2 {
+  font-size: clamp(2em, 6vw, 60px);
+  margin-bottom: clamp(15px, 4vw, 30px);
+  color: white;
+  font-family: "bangers";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.contact {
+  width: 100%;
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.contact h3 {
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.5px black;
+  font-size: clamp(24px, 4vw, 36px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+}
+
+.contact h4 {
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.5px black;
+  font-size: clamp(20px, 3vw, 25px);
+}
+
+.contact p {
+  margin: 5px 0;
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.5px black;
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.join h1 {
+  color: white;
+  font-family: "Bangers", cursive;
+  font-size: clamp(40px, 8vw, 100px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-top: clamp(40px, 6vw, 80px);
+  animation: blink 1s infinite;
+}
+
+/* Animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Very small devices */
+@media screen and (max-width: 320px) {
+  .event-title {
+    font-size: 2.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2em;
+  }
+
+  .welcome-section ul li,
+  .about-csi ul,
+  .our-audience ul,
+  .contact p {
+    font-size: 14px;
+  }
+
+  .join h1 {
+    font-size: 35px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-image: none;
+  }
+
+  .main-text,
+  .welcome-section,
+  .about-section,
+  .contact-details {
+    color: black;
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+  }
+
+  .unstop-button,
+  .countdown-container,
+  .join h1 {
+    display: none;
+  }
+}
