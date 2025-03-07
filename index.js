@@ -2,7 +2,7 @@
 const countdownElement = document.getElementById("countdown");
 
 // Set the target date for the event
-const targetDate = new Date("2025-01-28T00:00:00").getTime();
+const targetDate = new Date("2025-03-29T00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
