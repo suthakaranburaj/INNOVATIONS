@@ -7,17 +7,30 @@
 
 /* Base styles */
 body {
+  /* Add this to create a dark overlay */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0,0.3); /* Adjust opacity (0.3) to make darker */
+  z-index: -1; /* Ensure it stays behind content */
+}
+
+/* Keep existing background properties in body */
+body {
   background-image: url("background1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -webkit-backface-visibility: hidden;
-  -ms-interpolation-mode: bicubic;
-  overflow-x: hidden;
+  /* ... rest of your existing body styles ... */
 }
 
 /* Responsive image base styles */
@@ -382,8 +395,9 @@ a {
   margin: 5px 0;
   color: white;
   font-family: "Bangers", cursive;
-  -webkit-text-stroke: 0.5px black;
+  /* -webkit-text-stroke: 0.5px black; */
   font-size: clamp(16px, 2.5vw, 20px);
+  color: hsl(0, 0%, 95%);
 }
 
 .join h1 {
